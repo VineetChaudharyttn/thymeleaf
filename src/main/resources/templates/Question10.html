@@ -6,9 +6,30 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{/js/loader.js}"></script>
+    <script>
+        $(function () {
+            $('#loaderImage').hide();
+            $('#btn').on('click',function () {
+                var data=$('#form').serialize();
+                showDetail(data);
+                return false;
+            });
+            $(document).ajaxStart(function () {
+                $('#loaderImage').show();
+            })
+        })
+    </script>
 </head>
 <body>
-<img th:src="@{/image/ajax-loader1.gif}" class="loaderImage">
-<button id="btn">click me</button>
+<form id="form" method="post">
+    <input type="text" th:name="name" placeholder="Name"/>
+    <input type="text" th:name="salary" placeholder="Salary"/>
+    <input type="text" th:name="department" placeholder="Department"/>
+    <input type="text" th:name="gender" placeholder="Gender"/>
+    <button id="btn">click me</button>
+</form>
+    <img src="image/loader.gif" id="loaderImage">
+    <p id="response"></p>
+
 </body>
 </html>

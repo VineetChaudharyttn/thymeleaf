@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Controller
 public class TestController {
@@ -117,9 +115,9 @@ public class TestController {
 
     @RequestMapping(value = "/loaded",method = RequestMethod.POST)
     @ResponseBody
-    String ret() throws InterruptedException {
+    String ret(@ModelAttribute Employee employee    ) throws InterruptedException {
         Thread.sleep(1000);
-        return "hello";
+        return employee.toString()+"<br/>";
     }
 
 }

@@ -1,28 +1,16 @@
-$(document).on('click', '#btn', function () {
-    $('.loaderImage').css('display','block')
-    loader();
-});
-var loader = function () {
+function showDetail(formData) {
 
-    var loaded=$.ajax({
+    $.ajax({
         url: "/loaded",
         method:"POST",
-        success: function () {
-            $('.loaderImage').css('display','none');
+        data:formData,
+        success: function (data) {
+            $('#loaderImage').hide();
+            $('#response').append(data);
+            console.log("Successfully Registration");
         },
         error: function () {
-
+            alert("error fetching data");
         }
     });
-    loaded.done(function (data) {
-        $('.loaderImage').css('display','none');
-        confirm(data);
-    });
-
 };
-
-$(document).ready(function () {
-   $('.loaderImage').css('display', 'none');
-   console.log("log on ready");
-
-});

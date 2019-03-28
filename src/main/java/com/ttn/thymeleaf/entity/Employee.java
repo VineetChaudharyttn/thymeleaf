@@ -7,9 +7,6 @@ public class Employee {
     private String gender;
     private Integer salary;
 
-    public Employee() {
-    }
-
     public Employee(String name, String department, String gender, Integer salary) {
         this.name = name;
         this.department = department;
@@ -56,6 +53,6 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", gender='" + gender + '\'' +
                 ", salary=" + salary +
-                '}';
+                "}\n";
     }
 }
