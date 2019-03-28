@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Gender</th>
+            <th>Salary</th>
+        </tr>
+        <tr th:each="result,iterStat:${emplist}" th:classappend="${iterStat.even}?'even':'row'">
+            <td th:text="${result.name}"></td>
+            <td th:text="${result.department}"></td>
+            <td th:text="${result.gender}"></td>
+            <td th:text="${result.salary}"></td>
+        </tr>
+    </table>
+</body>
+</html>

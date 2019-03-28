@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/employee}" th:object="${employee}" method="post">
+    <table>
+        <tr><td><label>Name</label></td>
+        <td><input th:type="text" th:name="name"></td></tr>
+        <tr><td><label>Department</label></td>
+            <td><input th:type="text" th:name="department"></td></tr>
+        <tr><td><label>Gender</label></td>
+            <td><input th:type="text" th:name="gender"></td></tr>
+        <tr><td><label>Salary</label></td>
+            <td><input th:type="text" th:name="salary"></td></tr>
+        <tr><td></td>
+            <td><input type="submit" name="Submit"></td></tr>
+    </table>
+
+
+
+</form>
+</body>
+</html>

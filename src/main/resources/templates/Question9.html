@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select>
+    <option th:value="none">select</option>
+    <option th:each="comp:${T(com.ttn.thymeleaf.enums.Enum).values()}" th:value="${comp.getValue()}"  th:text="${comp.getValue()}"></option>
+</select>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Department</td>
+        <td>DOB</td>
+        <td>Salary</td>
+    </tr>
+    <tr th:each="result:${emp}">
+        <td th:text="${result.name}"></td>
+        <td th:text="${result.department}"></td>
+        <td th:text="${result.gender}"></td>
+        <td th:text="${result.salary}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.odd{
+    background-color: grey;
+}
+.row{
+    background-color: blue;
+}
+.even{
+    background-color: red;
+}
+
+.loaderImage{
+    position: center;
+    height: 20%;
+    width: 20%;
+    display: block;
+}
