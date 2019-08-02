@@ -91,6 +91,7 @@ public class TestController {
     @RequestMapping(value = "/time",method = RequestMethod.POST)
     @ResponseBody
     String time(){
+        System.out.println("hit");
         return new Date().toString();
     }
 
